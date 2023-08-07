@@ -22,13 +22,12 @@ public class Car : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        if(other.CompareTag("Obstacles")){
+        if(other.CompareTag("Obstacle")){
             SceneManager.LoadScene(0);
         }
     }
 
     public void Steer(int value){
         _steerValue = value;
-        Debug.Log(_steerValue);
     }
 }
